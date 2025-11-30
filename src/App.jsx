@@ -1,7 +1,16 @@
-import React from 'react'
+import { ThemeProvider } from './context/theme-context'
+import Navbar from './components/navbar'
+import Hero from './components/sections/hero'
 
 const App = () => {
-	return <div className='bg-red-50'>App</div>
+	return (
+		<ThemeProvider>
+			<div>
+				<Navbar />
+				<Hero />
+			</div>
+		</ThemeProvider>
+	)
 }
 
 export default App
